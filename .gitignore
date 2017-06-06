@@ -1,0 +1,15 @@
+# Logs
+logs
+*.log
+
+# Runtime data
+pids
+*.pid
+*.seed
+
+# Directory for maven output
+output
+
+#idea file
+.idea
+.imi
