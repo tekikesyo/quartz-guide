@@ -8,8 +8,8 @@ pids
 *.seed
 
 # Directory for maven output
-output
+target
 
 #idea file
 .idea
-*.imi
+*.iml
