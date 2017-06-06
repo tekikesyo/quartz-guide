@@ -9,7 +9,7 @@
     <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
     <modules>
-        <module>getting-started-with-quartz</module>
+        <module>quartz-quick-start-demo</module>
     </modules>
 
 
