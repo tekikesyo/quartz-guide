@@ -22,6 +22,9 @@ public class SimpleSchedulerManager {
         // Grab the SimpleSchedulerManager instance from the Factory
         Scheduler scheduler = StdSchedulerFactory.getDefaultScheduler();
 
+        // and start it off
+        scheduler.start();
+
         // define the job and tie it to our SimpleJob class
         JobDetail job = newJob(SimpleJob.class)
                 .withIdentity("job1", "group1")
@@ -38,8 +41,5 @@ public class SimpleSchedulerManager {
 
         // Tell quartz to schedule the job using our trigger
         scheduler.scheduleJob(job, trigger);
-
-        // and start it off
-        scheduler.start();
     }
 }
