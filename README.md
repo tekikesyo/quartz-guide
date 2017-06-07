@@ -6,7 +6,7 @@ quartz使用指南
 ### 二、官网资料
 examples文件夹是官网的demo
 
-![image](http://www.quartz-scheduler.org/documentation/https://github.com/w1992wishes/quartz-guide/tree/master/1.png)
+![image](https://github.com/w1992wishes/quartz-guide/blob/master/1.png)
 ### 三、概览
 1. quartz-quick-start-demo模块 -> 一个快速入门的简单例子
 2. quartz-JobDataMap -> 学习quartz的JobDataMap
