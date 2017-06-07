@@ -13,6 +13,7 @@
         <module>quartz-JobDataMap</module>
         <module>quartz-Triggers</module>
         <module>quartz-TriggerListener-JobListener</module>
+        <module>quartz-job-store</module>
     </modules>
 
     <dependencies>
