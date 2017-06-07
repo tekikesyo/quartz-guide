@@ -12,6 +12,7 @@
         <module>quartz-quick-start-demo</module>
         <module>quartz-JobDataMap</module>
         <module>quartz-Triggers</module>
+        <module>quartz-TriggerListener-JobListener</module>
     </modules>
 
     <dependencies>
