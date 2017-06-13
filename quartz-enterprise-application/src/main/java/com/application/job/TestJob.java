@@ -17,6 +17,6 @@ public class TestJob extends AbstractJob {
 
     public void doJob(JobExecutionContext ctx) throws JobExecutionException {
         JobDetail jobDetail = ctx.getJobDetail();
-        logger.debug(jobDetail.getKey().getName() + " : " + jobDetail.getKey().getGroup() + " with the time is : " + new Date().toString());
+        System.out.println(jobDetail.getKey().getName() + " : " + jobDetail.getKey().getGroup() + " with the time is : " + new Date().toString());
     }
 }

@@ -10,6 +10,7 @@ import org.quartz.Trigger;
 import org.quartz.TriggerKey;
 import org.quartz.impl.triggers.CronTriggerImpl;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.text.ParseException;
 
@@ -20,6 +21,7 @@ import static org.quartz.TriggerBuilder.newTrigger;
 /**
  * Created by w1992wishes on 2017/6/12.
  */
+@Service("testService")
 public class TestServiceImpl extends BaseService implements TestService {
 
     @Autowired
@@ -28,16 +30,12 @@ public class TestServiceImpl extends BaseService implements TestService {
     @Override
     public void initialize() {
         super.initialize();
-    }
-
-    @Override
-    public void start() {
         try {
             newCollectJob();
         } catch (SchedulerException e) {
             logger.error("", e);
         }
-    };
+    }
 
     public void resetTrigger(String triggerTime) throws SchedulerException, ParseException {
         TriggerKey triggerKey = new TriggerKey("testTrigger", "testGroup");
@@ -63,7 +61,7 @@ public class TestServiceImpl extends BaseService implements TestService {
         Trigger trigger = newTrigger()
                 .withIdentity("testTrigger", "testGroup")
                 .forJob(job)
-                .withSchedule(cronSchedule(bulidCronExpression("3:00")))
+                .withSchedule(cronSchedule(bulidCronExpression("12:05")))
                 .build();
 
         schedulerService.scheduleJob(job, trigger);
